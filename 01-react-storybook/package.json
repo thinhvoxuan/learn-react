@@ -1,0 +1,9 @@
+{
+  "name": "01-react-storybook",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "getstorybook": "^1.7.0"
+  }
+}
