@@ -1,10 +1,17 @@
 import React from 'react';
-import { storiesOf, action } from '@kadira/storybook';
+import {storiesOf, action, linkTo, setAddon} from '@kadira/storybook'
+import infoAddon from '@kadira/react-storybook-addon-info'
+
+setAddon(infoAddon)
 
 storiesOf('Button', module)
-  .add('with text', () => (
-    <button onClick={action('clicked')}>Hello Button</button>
-  ))
+  .addWithInfo(
+    'with text',
+    ``,
+    () => (
+      <button onClick={action('clicked')}>Hello Button</button>
+    )
+  )
   .add('with some emoji', () => (
     <button onClick={action('clicked')}>😀 😎 👍 💯</button>
   ));
